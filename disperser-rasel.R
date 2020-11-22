@@ -3,6 +3,7 @@
 #installing packages
 install.packages(c("Rcpp", "downloader", "rgdal"))
 
+
 #installing SplitR package
 devtools::install_github("lhenneman/SplitR", force = TRUE)
 
@@ -14,11 +15,11 @@ install.packages("USAboundariesData", repos = "http://packages.ropensci.org", ty
 ####### problem installing package (vignette building failed) ######
 
 
-devtools::install_github("lhenneman/disperseR@dev", force = TRUE, build_vignettes = TRUE)
+# devtools::install_github("munshimdrasel/disperseR", force = TRUE, build_vignettes = TRUE)
 
-# package install without vignette
+# package installation without vignette
 
-devtools::install_github("lhenneman/disperseR@dev", force = TRUE, build_vignettes = FALSE)
+devtools::install_github("munshimdrasel/disperseR", force = TRUE, build_vignettes = FALSE)
 
 #setting R directory
 setwd("/Users/munshirasel/hello-world/munshimdrasel/mello/mello2")
@@ -51,7 +52,7 @@ disperseR::get_data(data = "all",
 
 
 # view units data
-view(disperseR::units)
+view(disperseR::units-rasel)
 # pick out units to run, top two SOx emitters in 2006 & 2005
 unitsrun2005 <- disperseR::units %>%
   dplyr::filter(year == 2005) %>% # only get data for 2005
@@ -477,3 +478,4 @@ plotUnitsRanked
 ##End of code
 
 # not uploading main folders due to large size
+
